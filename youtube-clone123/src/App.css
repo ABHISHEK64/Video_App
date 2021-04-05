@@ -1,0 +1,12 @@
+/*@import './Base.scss';*/
+.App_Container{
+  display: flex;
+margin-top: 10vh;
+  
+}
+
+.Main_Contenter{
+  background-color: #16181b;
+  color: white;
+  overflow-y: scroll;
+}

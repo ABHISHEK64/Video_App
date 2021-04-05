@@ -1,0 +1,63 @@
+@import "../_Base.scss";
+
+.Sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background: $black-primary;
+    width: 250px;
+    height: 90vh;
+    padding-top:2rem;
+    transition: transform 0.2s ease-in;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    justify-content: center;
+    z-index: 9999;
+
+    li{ display: flex;
+        align-items: center;
+        list-style: none;
+        justify-content: center;
+        color: white;
+        padding: 0;
+        
+        margin: auto;
+        cursor: pointer;
+        span{
+            margin-left: 1rem;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.4;
+        }
+        &:hover{
+            background-color: $border-color;
+        }
+    }
+    &.open{
+        transform: translateX(0);
+    }
+    hr{
+        background-color: $border-color;
+    }   
+}
+@media (max-width:$breakpoint-medium){
+    .Sidebar{
+        width: 90px;
+        li{
+            justify-content: center;
+        }
+        span{
+            display: none;
+        }
+    }
+}
+@media(max-width:$breakpoint-small){
+    .Sidebar{
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 999;
+        height: 100vh;
+    }
+}

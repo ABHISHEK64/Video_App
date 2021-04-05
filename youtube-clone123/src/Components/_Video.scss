@@ -1,0 +1,40 @@
+@import '../_Base.scss';
+
+.video{
+    cursor: pointer;
+    margin-bottom: 1rem;
+    padding: 0.7;
+    font-weight: 500;
+    font-size: 0.9rem;
+    &__top{
+       margin-bottom: 0.5rem;
+       img{
+           width: 100%;
+           height: 100%;
+           position: relative;
+           max-width: 400px;
+           max-height: 100px;
+           object-fit: contain;
+           
+       }
+       span{
+           position: absolute;
+           margin-top: 60px;
+           right: 0.3rem;
+           padding: 0.4rem;
+           background-color: black;
+           border-radius: 3px;
+       } 
+    }
+    &__title{
+        font-weight: bold;
+        font-size:18px;
+        color: beige;
+        @include line-clamp(1);
+    }
+    &__channel{
+        display: flex;
+        justify-content:space-evenly;
+        margin-left: -40%;
+    }
+}

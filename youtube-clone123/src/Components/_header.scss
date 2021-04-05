@@ -1,0 +1,76 @@
+@import "../_Base.scss";
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: $black-primary;
+    height: 10vh;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    &_Menue{
+         display: none ;
+         color: white !important;
+    }
+   
+}
+.Header_Icons{
+    display: flex !important;
+    flex: 0.6;
+    padding: 0.1rem;
+    margin: 0.1rem;
+    justify-content: space-evenly;
+    border-radius: 3px;
+    border:1.2px solid;
+    background-color: $black-secondary;
+    cursor: pointer;
+}
+form{
+    flex: 0.6;
+    display: flex;
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border-radius: 3px;
+    border: 1.2px solid;
+    background-color:  $black-secondary;
+    justify-content: space-between;
+}
+.Header_Input{
+    
+    background: transparent !important;
+    border: $black-secondary;
+    color: $text-color;
+    outline: none !important;
+}
+.HeaderLogo{
+    width: 40px;
+    height: 40px;
+}
+.buttonName{
+    padding: 0 1 1.25;
+    background: transparent;
+    border: none;
+   
+    &:focus{
+        border: none;
+    }
+
+
+}
+@media (max-width: $breakpoint-small){
+    .Header{
+        padding: 1rem;
+    
+    form{
+        flex: 1;
+    }
+    &_Menue{
+        display: block !important;
+    }
+}
+.Header_Icons>*:not(avatar){
+    display: none !important;
+}
+}
